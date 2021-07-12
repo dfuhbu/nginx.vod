@@ -67,8 +67,8 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
             --with-file-aio \
             --with-stream \
             --with-stream_ssl_module \
-            --add-module=../nginx-module-vts/ \
-            --add-module=../nginx-vod-module/ \
+            --add-module=$VTS_DIR \
+            --add-module=$NGINX_VOD_DIR \
             --with-http_dav_module \
     && make -j64 \
     && make install -j64 \
